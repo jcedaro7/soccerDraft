@@ -1,13 +1,10 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text, SafeAreaView } from 'react-native';
+import Header from '../SharedComponents/Header/Header';
 
-const Home = () => (
+const Home: React.FC = () => (
   <SafeAreaView style={styles.container}>
-    <View style={styles.titleContainer}>
-      <Text style={styles.title}>
-        Soccer Draft
-      </Text>
-    </View>
+    <Header headerTitle={'Soccer Draft'} />
     <View style={styles.buttonsContainer}>
       <TouchableOpacity style={styles.buttons} onPress={() => alert('Work in Progress')}>
         <Text style={styles.buttonLabel}>New Match</Text>
@@ -26,19 +23,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     backgroundColor: '#000000'
-  },
-  titleContainer: {
-    width: 250,
-    height: 80,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 20
-  },
-  title: {
-    fontFamily: 'Arial',
-    color: '#7FF2D0',
-    fontSize: 35,
-    fontWeight: "bold"
   },
   buttonsContainer: {
     height: 200,
