@@ -1,18 +1,19 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text, SafeAreaView } from 'react-native';
 import Header from '../SharedComponents/Header/Header';
-import PlayerList from '../PlayerList/PlayerList';
-import NewMatch from '../NewMatch/NewMatch';
 
-const Home: any = (props:any) => (
+const NewMatch: React.FC = () => (
   <SafeAreaView style={styles.container}>
-    <Header headerTitle={'Soccer Draft'} />
+    <Header headerTitle={'Match Selector'} />
     <View style={styles.buttonsContainer}>
-      <TouchableOpacity style={styles.buttons} onPress={() => props.navigation.navigate("NewMatch")}>
-        <Text style={styles.buttonLabel}>New Match</Text>
+      <TouchableOpacity style={styles.buttons} onPress={() => alert('Work in Progress')}>
+        <Text style={styles.buttonLabel}>5 v 5</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttons} onPress={() => props.navigation.navigate("PlayerList")}>
-        <Text style={styles.buttonLabel}>Player List</Text>
+      <TouchableOpacity style={styles.buttons} onPress={() => alert('Work in Progress')}>
+        <Text style={styles.buttonLabel}>6 v 6</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.buttons} onPress={() => alert('Work in Progress')}>
+        <Text style={styles.buttonLabel}>7 v 7</Text>
       </TouchableOpacity>
     </View>
   </SafeAreaView>
@@ -48,4 +49,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Home;
+export default NewMatch;
