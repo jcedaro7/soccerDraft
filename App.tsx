@@ -8,10 +8,35 @@ const Drawer = createDrawerNavigator();
 
 function MyDrawer() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: '#111111',
+        },
+        headerStyle: {
+          backgroundColor: '#000000',
+          borderBottomColor: '#000000'
+        },
+        headerTintColor: '#7FF2D0',
+        drawerActiveTintColor: '#7FF2D0',
+        drawerInactiveTintColor: '#7FF2D0'
+    }}
+    >
       <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="NewMatch" component={NewMatch} />
-      <Drawer.Screen name="PlayerList" component={PlayerList} />
+      <Drawer.Screen
+        name="NewMatch"
+        component={NewMatch}
+        options={{
+          title: 'New Match',
+        }}
+      />
+      <Drawer.Screen
+        name="PlayerList"
+        component={PlayerList}
+        options={{
+          title: 'Player List',
+        }}
+      />
     </Drawer.Navigator>
   );
 }
