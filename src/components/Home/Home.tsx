@@ -1,10 +1,8 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text, SafeAreaView } from 'react-native';
 import Header from '../SharedComponents/Header/Header';
-import PlayerList from '../PlayerList/PlayerList';
-import NewMatch from '../NewMatch/NewMatch';
 
-const Home: any = (props:any) => (
+const Home = (props: any) => (
   <SafeAreaView style={styles.container}>
     <Header headerTitle={'Soccer Draft'} />
     <View style={styles.buttonsContainer}>

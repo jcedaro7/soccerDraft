@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ headerTitle }) => (
 
 const styles = StyleSheet.create({
   titleContainer: {
-    width: 250,
+    width: 300,
     height: 80,
     alignItems: "center",
     justifyContent: "center",
