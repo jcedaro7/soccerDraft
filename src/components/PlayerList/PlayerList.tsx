@@ -16,7 +16,7 @@ const PlayerList = () => {
             return (
               <View style={styles.playerContainer} key={player.id}>
                 <View>
-                  <Image source={user} style={{ width: 50, height: 50, margin: 10 }} />
+                  <Image source={user} style={styles.logo} />
                 </View>
                 <View>
                   <Text style={styles.playerName}>{player.name}</Text>
@@ -38,6 +38,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     backgroundColor: '#000000'
+  },
+  logo:{
+    width: 50,
+    height: 50,
+    margin: 10
   },
   playerContainer: {
     height: 100,

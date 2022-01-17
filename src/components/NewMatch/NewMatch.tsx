@@ -1,23 +1,26 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text, SafeAreaView } from 'react-native';
 import Header from '../SharedComponents/Header/Header';
+import { useNavigation } from '@react-navigation/native';
 
-const NewMatch: React.FC = () => (
+const NewMatch = () => {
+  const navigation = useNavigation();
+  return(
   <SafeAreaView style={styles.container}>
     <Header headerTitle={'Match Selector'} />
     <View style={styles.buttonsContainer}>
-      <TouchableOpacity style={styles.buttons} onPress={() => alert('Work in Progress')}>
+      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("PlayerSelection")}>
         <Text style={styles.buttonLabel}>5 v 5</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttons} onPress={() => alert('Work in Progress')}>
+      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("PlayerSelection")}>
         <Text style={styles.buttonLabel}>6 v 6</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttons} onPress={() => alert('Work in Progress')}>
+      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("PlayerSelection")}>
         <Text style={styles.buttonLabel}>7 v 7</Text>
       </TouchableOpacity>
     </View>
   </SafeAreaView>
-  );
+  );}
 
 const styles = StyleSheet.create({
   container: {

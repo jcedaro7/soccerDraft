@@ -65,7 +65,7 @@ export const players = [
     nickName: "Aquinator"
   },
   {
-    id: 12,
+    id: 14,
     name: "Sebastian Chervo",
     nickName: "Chaja"
   },

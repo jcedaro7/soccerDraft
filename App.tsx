@@ -5,7 +5,7 @@ import Home from './src/components/Home/Home';
 import PlayerSelection from './src/components/PlayerSelection/PlayerSelection';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const Drawer = createDrawerNavigator();
+export const Drawer = createDrawerNavigator();
 
 function MyDrawer() {
   return (
@@ -43,6 +43,7 @@ function MyDrawer() {
         component={PlayerSelection}
         options={{
           title: 'Player Selection',
+          drawerItemStyle: { display: 'none' }
         }}
       />
     </Drawer.Navigator>
