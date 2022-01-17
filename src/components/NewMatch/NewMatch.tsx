@@ -7,7 +7,6 @@ const NewMatch = () => {
   const navigation = useNavigation();
   return(
   <SafeAreaView style={styles.container}>
-    <Header headerTitle={'Match Selector'} />
     <View style={styles.buttonsContainer}>
       <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("PlayerSelection")}>
         <Text style={styles.buttonLabel}>5 v 5</Text>
