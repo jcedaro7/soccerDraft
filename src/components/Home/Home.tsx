@@ -7,12 +7,11 @@ const Home = () => {
   const navigation = useNavigation();
   return(
   <SafeAreaView style={styles.container}>
-    <Header headerTitle={'Soccer Draft'} />
     <View style={styles.buttonsContainer}>
-      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("NewMatch")}>
+      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate('NewMatch')}>
         <Text style={styles.buttonLabel}>New Match</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("PlayerList")}>
+      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate('PlayerList')}>
         <Text style={styles.buttonLabel}>Player List</Text>
       </TouchableOpacity>
     </View>
@@ -28,10 +27,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000'
   },
   buttonsContainer: {
+    flex: 1,
     height: 200,
     width: 330,
     justifyContent: 'center',
-    flex: 1,
   },
   buttons: {
     width: 330,

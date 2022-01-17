@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Image, View, Text,ScrollView, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
-import Header from '../SharedComponents/Header/Header';
 import user from '../../../assets/user.png';
 import { players } from '../../utils/players'
 import { Player } from '../../core/Player';
@@ -21,7 +20,6 @@ const PlayerSelection = () => {
 
   return(
     <SafeAreaView style={styles.container}>
-      <Header headerTitle={'Player Selection'} />
       <ScrollView>
         {
           players.map((player: Player) => {
