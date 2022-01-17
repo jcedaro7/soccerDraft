@@ -1,23 +1,24 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text, SafeAreaView } from 'react-native';
 import Header from '../SharedComponents/Header/Header';
-import PlayerList from '../PlayerList/PlayerList';
-import NewMatch from '../NewMatch/NewMatch';
+import { useNavigation } from '@react-navigation/native';
 
-const Home: any = (props:any) => (
+const Home = () => {
+  const navigation = useNavigation();
+  return(
   <SafeAreaView style={styles.container}>
     <Header headerTitle={'Soccer Draft'} />
     <View style={styles.buttonsContainer}>
-      <TouchableOpacity style={styles.buttons} onPress={() => props.navigation.navigate("NewMatch")}>
+      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("NewMatch")}>
         <Text style={styles.buttonLabel}>New Match</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttons} onPress={() => props.navigation.navigate("PlayerList")}>
+      <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("PlayerList")}>
         <Text style={styles.buttonLabel}>Player List</Text>
       </TouchableOpacity>
     </View>
   </SafeAreaView>
   );
-
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,

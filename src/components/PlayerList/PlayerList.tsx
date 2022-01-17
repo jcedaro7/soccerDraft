@@ -2,30 +2,21 @@ import React from 'react';
 import { Image, View, Text,ScrollView, StyleSheet, SafeAreaView } from 'react-native';
 import Header from '../SharedComponents/Header/Header';
 import user from '../../../assets/user.png';
+import { players } from '../../utils/players';
+import { Player } from '../../core/Player';
 
 const PlayerList = () => {
-  const players = [
-    {
-      id: 1,
-      name: "Nicolas Lobos",
-      nickName: "Coco"
-    },
-    {
-      id: 2,
-      name: "Julian Cedaro",
-      nickName: "Yulian"
-    }
-  ];
+
   return(
     <SafeAreaView style={styles.container}>
       <Header headerTitle={'Player List'} />
       <ScrollView>
         {
-          players.map((player) =>   {
+          players.map((player: Player) =>   {
             return (
               <View style={styles.playerContainer} key={player.id}>
                 <View>
-                  <Image source={user} style={{ width: 50, height: 50, margin: 10 }} />
+                  <Image source={user} style={styles.logo} />
                 </View>
                 <View>
                   <Text style={styles.playerName}>{player.name}</Text>
@@ -47,6 +38,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     backgroundColor: '#000000'
+  },
+  logo:{
+    width: 50,
+    height: 50,
+    margin: 10
   },
   playerContainer: {
     height: 100,
