@@ -31,7 +31,7 @@ const PlayerSelection = () => {
                 key={player.id}
                 onPress={() => handleChange(player.id)}>
                 <View>
-                  <Image source={user} style={{ width: 50, height: 50, margin: 10 }} />
+                  <Image source={user} style={styles.logo} />
                 </View>
                 <View>
                   <Text style={defineStyle(player.id) ? styles.selectedPlayerName : styles.playerName}>{player.name}</Text>
@@ -53,6 +53,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     backgroundColor: '#000000'
+  },
+  logo:{
+    width: 50,
+    height: 50,
+    margin: 10
   },
   playerContainer: {
     height: 100,

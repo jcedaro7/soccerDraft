@@ -20,7 +20,8 @@ const NewMatch = () => {
       </TouchableOpacity>
     </View>
   </SafeAreaView>
-  );}
+  );
+}
 
 const styles = StyleSheet.create({
   container: {

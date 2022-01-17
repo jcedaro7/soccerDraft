@@ -5,7 +5,7 @@ import Home from './src/components/Home/Home';
 import PlayerSelection from './src/components/PlayerSelection/PlayerSelection';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-export const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
 
 function MyDrawer() {
   return (
